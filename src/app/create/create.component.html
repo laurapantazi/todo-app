@@ -1,0 +1,26 @@
+<div class="container">
+  <div>
+    <h1>ToDo Form</h1>
+    <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+      <div class="form-group" [formGroup]="todoForm" >
+        <input type="text" class="form-control" id="description" [(ngModel)]="description" name="description" formControlName="description" placeholder="Type a new task">
+        <label for="description"></label>
+      </div>
+      <button type="submit" class="btn btn-success" [disabled]="!todoForm.controls.description.valid">Create</button>
+    </form>
+  </div>
+</div>
+
+
+<div class="d-flex flex-row flex-wrap">
+	<div *ngFor="let task of tasks" class="m-1">
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<div class="input-group-text">
+					<input type="checkbox" [checked]="task.complete">
+				</div>
+			</div>
+			<input type="text" class="form-control" value="{{task.description}}">
+		</div>
+	</div>
+</div>

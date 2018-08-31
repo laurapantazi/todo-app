@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-
+import { TasksService } from '../tasks.service';
 @Component({
   selector: 'app-todo-form',
   templateUrl: './todo-form.component.html',
@@ -10,8 +10,9 @@ export class TodoFormComponent implements OnInit {
 
 tasks = [];
 description = "";
+complete = false;
 todoForm: FormGroup;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private ts: TasksService) { }
 
   ngOnInit() {
   	this.todoForm = new FormGroup({
@@ -19,13 +20,10 @@ todoForm: FormGroup;
   	});
   }
 
-    books: any [];
-
-
   onSubmit(){
   	if (!this.todoForm.invalid)
   	{
-  		this.tasks.push({ description: this.description, complete: false});
+  		this.ts.postTask(this.description, this.complete);
   	}
   	this.description = "";
   }

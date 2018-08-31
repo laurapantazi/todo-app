@@ -10,22 +10,3 @@
     </form>
   </div>
 </div>
-
-
-<div class="d-flex flex-row flex-wrap">
-	<div *ngFor="let task of tasks" class="m-1">
-		<div class="input-group mb-3">
-			<div class="input-group-prepend">
-				<div class="input-group-text">
-					<input type="checkbox" [checked]="task.complete">
-				</div>
-			</div>
-			<input type="text" class="form-control" value="{{task.description}}">
-		</div>
-	</div>
-</div>
-
-
-
-
-

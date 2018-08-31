@@ -1,0 +1,17 @@
+<div class="d-flex flex-row flex-wrap">
+	<div *ngFor="let task of tasks" class="m-1">
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<div class="input-group-text">
+					<input type="checkbox" [checked]="task.complete" (change)="toggleTask(task._id,task.description,task.complete)" >
+				</div>
+			</div>
+			<input #description type="text" class="form-control" value="{{task.description}}" (keyup.enter)="onEnterDescription(task._id,description.value,task.complete)">
+			<div class="input-group-append ">
+			<button (click)="deleteTask(task._id)" class="btn input-group-text">
+				<span class="fa fa-trash-o" style="color:red;"></span>
+			</button>
+			</div>
+		</div>
+	</div>
+</div>

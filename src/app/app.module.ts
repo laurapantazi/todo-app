@@ -10,35 +10,25 @@ import { EditComponent } from './edit/edit.component';
 import { CreateComponent } from './create/create.component';
 import { TasksService } from './tasks.service';
 import { ShowComponent } from './show/show.component';
+import { PageNotFoundComponent } from './not-found.component';
 
-const appRoutes: Routes =[
-{
-  path: 'create',
-  component: CreateComponent
-},
-{
-  path: 'show',
-  component: ShowComponent
-},
-{
-  path: 'edit/:id',
-  component: EditComponent
-}
-];
+import { AppRoutingModule } from './app-routing.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     TodoFormComponent,
     CreateComponent,
     EditComponent,
-    ShowComponent
+    ShowComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [ TasksService ],
   bootstrap: [AppComponent]

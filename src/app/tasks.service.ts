@@ -24,7 +24,6 @@ export class TasksService {
 
   getTasks(){
   	return this.http.get(`${this.uri}/tasks`).map(x=> {
-  		console.log(x);
   		return x;
   	});
   }
@@ -42,7 +41,6 @@ export class TasksService {
   }
 
   public deleteTask(id){
-  	console.log("trigger"+id);
   	return this.http.delete(`${this.uri}/tasks/`+id).map(x => {return x;});
   }
 

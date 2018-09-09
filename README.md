@@ -1,5 +1,4 @@
 # TodoApp
-
 This project is build with Angular 6, Express, Node.js and MongoDB.
 
 ## Prerequisites

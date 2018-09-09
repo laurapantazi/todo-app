@@ -1,5 +1,6 @@
-<div style="text-align:center">
+<div class="container">
 <nav class="navbar navbar-expand-sm bg-light">
+  <h3>TodoApp</h3>
   <div class="container-fluid">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -8,7 +9,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a routerLink="show" class="nav-link" routerLinkActive="active">
+        <a routerLink="tasks" class="nav-link" routerLinkActive="active">
           Show All Tasks
         </a>
       </li> 
@@ -17,4 +18,6 @@
 </nav>
 </div>
 
+<div class="container my-4">
 <router-outlet></router-outlet>
+</div>

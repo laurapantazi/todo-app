@@ -1,6 +1,5 @@
 <div class="container">
   <div>
-    <h1>ToDo Form</h1>
     <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
       <div class="form-group" [formGroup]="todoForm" >
         <input type="text" class="form-control" id="description" [(ngModel)]="description" name="description" formControlName="description" placeholder="Type a new task">

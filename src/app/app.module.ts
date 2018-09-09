@@ -9,36 +9,28 @@ import { TodoFormComponent } from './todo-form/todo-form.component';
 import { EditComponent } from './edit/edit.component';
 import { CreateComponent } from './create/create.component';
 import { TasksService } from './tasks.service';
-import { ShowComponent } from './show/show.component';
+import { PageNotFoundComponent } from './not-found.component';
 
-const appRoutes: Routes =[
-{
-  path: 'create',
-  component: CreateComponent
-},
-{
-  path: 'show',
-  component: ShowComponent
-},
-{
-  path: 'edit/:id',
-  component: EditComponent
-}
-];
+import { AppRoutingModule } from './app-routing.module';
+import { TaskListComponent } from './task-list/task-list.component';
+import { TaskDetailComponent } from './task-detail/task-detail.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     TodoFormComponent,
     CreateComponent,
     EditComponent,
-    ShowComponent
+    PageNotFoundComponent,
+    TaskListComponent,
+    TaskDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [ TasksService ],
   bootstrap: [AppComponent]

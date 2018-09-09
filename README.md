@@ -1,10 +1,9 @@
 # TodoApp
+This project is build with Angular 6, Express, Node.js and MongoDB.
 
-This project was generated with Angular version 6.1.1., Express 4.16.3, MongoDB 3.1.4, NodeJS 8.11.2
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Prerequisites
+	* Node.js - Download and install Node.js
+	* MongoDB - Download and install MongoDB
 
 ## Functionality Overview
 
@@ -12,6 +11,20 @@ This application is a simple todo list
   * Get and display listed tasks
   * Create , Delete, Modify tasks
 
-## Further help
+## Getting Started
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. Clone or download repository
+2. Install the dependencies
+```
+npm install
+```
+3. Start your local MongoDB server `mongod`
+4. Start the application
+```
+ng serve
+```
+5. Start the server
+```
+npm start dev
+```
+6. Navigate to `http://localhost:4200/`

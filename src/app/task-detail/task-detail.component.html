@@ -1,0 +1,9 @@
+<div *ngIf="task">
+	<h2>{{task.description}}</h2>
+	<p *ngIf="task.complete">
+	Complete
+	</p>
+	<p *ngIf="!task.complete">
+	Incomplete
+	</p>
+</div>

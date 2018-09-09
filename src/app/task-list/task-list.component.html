@@ -1,5 +1,6 @@
 <div class="d-flex flex-row flex-wrap">
 	<div *ngFor="let task of tasks" class="m-1">
+		<a routerLink="/tasks/{{task._id}}">
 		<div class="input-group mb-3">
 			<div class="input-group-prepend">
 				<div class="input-group-text">
@@ -13,5 +14,6 @@
 			</button>
 			</div>
 		</div>
+		</a>
 	</div>
 </div>

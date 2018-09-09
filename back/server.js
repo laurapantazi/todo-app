@@ -27,7 +27,7 @@ router.route('/tasks').get((req, res)=>{
 	})
 });
 router.route('/tasks/:id').get((req, res)=>{
-	Tasks.find((err, tasks)=>{
+	Tasks.findOne((err, tasks)=>{
 		if (err) console.log(err);
 		else res.json(tasks);
 	})

@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { EditComponent } from './edit/edit.component';
 import { CreateComponent } from './create/create.component';
-import { ShowComponent } from './show/show.component';
+import { TaskListComponent } from './task-list/task-list.component';
+import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { PageNotFoundComponent } from './not-found.component';
 
 const appRoutes: Routes =[
@@ -12,13 +13,13 @@ const appRoutes: Routes =[
   component: CreateComponent
 },
 {
-  path: 'show',
-  component: ShowComponent
+  path: 'tasks',
+  component: TaskListComponent
 },
 
 {
-  path: 'edit/:id',
-  component: EditComponent
+  path: 'tasks/:id',
+  component: TaskDetailComponent
 },
 {
 	path: '',

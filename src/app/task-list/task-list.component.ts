@@ -2,21 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { TasksService } from '../tasks.service';
 
 @Component({
-  selector: 'app-show',
-  templateUrl: './show.component.html',
-  styleUrls: ['./show.component.css']
+  selector: 'app-task-list',
+  templateUrl: './task-list.component.html',
+  styleUrls: ['./task-list.component.css']
 })
-export class ShowComponent implements OnInit {
+export class TaskListComponent implements OnInit {
 
   constructor(private tasksService: TasksService) { }
 
   tasks: any;
 
   ngOnInit() {
-  	this.getTasks();
+  	this.showTasks();
   }
 
-  getTasks(){
+  showTasks(){
   	this.tasksService.getTasks().subscribe((data) =>
   	{
   		this.tasks = data;
@@ -25,7 +25,7 @@ export class ShowComponent implements OnInit {
 
   deleteTask(id){
   	this.tasksService.deleteTask(id).subscribe((response)=>{
-  		this.getTasks();
+  		this.showTasks();
   	});
   }
 

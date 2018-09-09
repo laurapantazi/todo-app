@@ -9,10 +9,11 @@ import { TodoFormComponent } from './todo-form/todo-form.component';
 import { EditComponent } from './edit/edit.component';
 import { CreateComponent } from './create/create.component';
 import { TasksService } from './tasks.service';
-import { ShowComponent } from './show/show.component';
 import { PageNotFoundComponent } from './not-found.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { TaskListComponent } from './task-list/task-list.component';
+import { TaskDetailComponent } from './task-detail/task-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +21,9 @@ import { AppRoutingModule } from './app-routing.module';
     TodoFormComponent,
     CreateComponent,
     EditComponent,
-    ShowComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TaskListComponent,
+    TaskDetailComponent
   ],
   imports: [
     BrowserModule,

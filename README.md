@@ -3,12 +3,12 @@
 This project is build with Angular 6, Express, Node.js and MongoDB.
 
 ## Prerequisites
-	* Node.js - Download and install Node.js
-	* MongoDB - Download and install MongoDB
+  * Node.js - Download and install Node.js
+  * MongoDB - Download and install MongoDB
 
 ## Functionality Overview
 
-This application is a simple todo list
+This application is a simple todo list, with the following features
   * Get and display listed tasks
   * Create , Delete, Modify tasks
 
@@ -24,8 +24,12 @@ npm install
 ```
 ng serve
 ```
-5. Start the server
+5. Navigate into back folder
+```
+cd back
+```
+6. Start the server
 ```
 npm start dev
 ```
-6. Navigate to `http://localhost:4200/`
+7. Navigate to `http://localhost:4200/`
